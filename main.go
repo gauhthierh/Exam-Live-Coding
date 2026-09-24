@@ -140,15 +140,11 @@ func main() {
 
 	cleanClothing := Clothing{"Pull propre", "white", true}
 
-	// TEST 1 : Affichage de paniers vides
-
 	fmt.Println("========== TEST 1 : PANIERS VIDES ==========")
 
 	basketWhite.displayBasket()
 	basketBlack.displayBasket()
 	basketColor.displayBasket()
-
-	// TEST 2 : Ajout correct de vêtements
 
 	fmt.Println("========== TEST 2 : AJOUTS VALIDES ==========")
 
@@ -161,91 +157,53 @@ func main() {
 	basketColor.addToBasket(colorShirt)
 	basketColor.addToBasket(colorShort)
 
-	// TEST 3 : Mauvaise couleur
-
 	fmt.Println("========== TEST 3 : MAUVAISE COULEUR ==========")
-
 	basketWhite.addToBasket(blackShirt)
 	basketBlack.addToBasket(colorShirt)
 	basketColor.addToBasket(whiteShirt)
 
-	// TEST 4 : Ajout d'un vêtement déjà propre
-
 	fmt.Println("========== TEST 4 : VÊTEMENT DÉJÀ PROPRE ==========")
-
 	basketWhite.addToBasket(cleanClothing)
 
-	// TEST 5 : Affichage des paniers remplis
-
 	fmt.Println("========== TEST 5 : AFFICHAGE DES PANIERS ==========")
-
 	basketWhite.displayBasket()
 	basketBlack.displayBasket()
 	basketColor.displayBasket()
 
-	// TEST 6 : Nettoyage d'un panier
-
 	fmt.Println("========== TEST 6 : NETTOYAGE ==========")
-
 	basketColor.cleanBasket()
-
 	basketColor.displayBasket()
-
-	// TEST 7 : Retirer les vêtements propres
 
 	fmt.Println("========== TEST 7 : VIDAGE DU LINGE PROPRE ==========")
-
 	basketColor.emptyCleanLaundry()
-
 	basketColor.displayBasket()
 
-	// TEST 8 : Nettoyage d'un panier vide
-
 	fmt.Println("========== TEST 8 : NETTOYAGE PANIER VIDE ==========")
-
 	basketColor.cleanBasket()
 
-	// TEST 9 : Vidage d'un panier vide
-
 	fmt.Println("========== TEST 9 : VIDAGE PANIER VIDE ==========")
-
 	basketColor.emptyCleanLaundry()
 
-	// TEST 10 : Aucun vêtement propre
-
 	fmt.Println("========== TEST 10 : AUCUN VÊTEMENT PROPRE ==========")
-
 	basketBlack.emptyCleanLaundry()
 
-	// TEST 11 : Washroom
-
 	fmt.Println("========== TEST 11 : BUANDERIE COMPLÈTE ==========")
-
 	washroom := Washroom{
 		white: basketWhite,
 		black: basketBlack,
 		color: basketColor,
 	}
-
 	washroom.displayWashRoom()
 
-	// TEST 12 : Nettoyage de tous les paniers
-
 	fmt.Println("========== TEST 12 : NETTOYAGE COMPLET ==========")
-
 	washroom.white.cleanBasket()
 	washroom.black.cleanBasket()
 	washroom.color.cleanBasket()
-
 	washroom.displayWashRoom()
 
-	// TEST 13 : Vidage de tous les paniers
-
 	fmt.Println("========== TEST 13 : VIDAGE COMPLET ==========")
-
 	washroom.white.emptyCleanLaundry()
 	washroom.black.emptyCleanLaundry()
 	washroom.color.emptyCleanLaundry()
-
 	washroom.displayWashRoom()
 }
