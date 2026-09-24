@@ -56,7 +56,7 @@ func (basket *Basket) addToBasket(clothing Clothing) {
 
 	basket.content = append(basket.content, clothing)
 
-	fmt.Println("Ajout d'un nouveau vêtement :", clothing.name, " au", basket.name)
+	fmt.Println("Ajout d'un nouveau vêtement :", clothing.name, "au", basket.name)
 }
 
 func (basket *Basket) cleanBasket() {
