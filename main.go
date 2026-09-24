@@ -62,7 +62,7 @@ func (basket *Basket) addToBasket(clothing Clothing) {
 func (basket *Basket) cleanBasket() {
 	count := 0
 
-	fmt.Println("=== Nettoyage du", basket.name, " ===")
+	fmt.Println("=== Nettoyage du", basket.name, "===")
 
 	if len(basket.content) == 0 {
 		fmt.Println("Impossible de nettoyer : le panier est vide")
@@ -76,7 +76,7 @@ func (basket *Basket) cleanBasket() {
 		}
 	}
 
-	fmt.Println("Le lavage du", basket.name, " est terminé,", count, " vêtements ont été lavés")
+	fmt.Println("Le lavage du", basket.name, "est terminé,", count, "vêtements ont été lavés")
 }
 
 func (basket *Basket) emptyCleanLaundry() {
